@@ -1,0 +1,32 @@
+.weatherapp {
+  margin: 100px;
+  border-width: 200px;
+  border-color: black;
+  background-color: #cfdac8;
+  padding: 50px;
+  border-radius: 10%;
+}
+#date-time {
+  text-align: center;
+  font-family: arial;
+  font-weight: bold;
+  font-size: 20px;
+}
+.city {
+  color: #184d47;
+}
+.celsius {
+  color: #184d47;
+}
+.fahrenheit {
+  color: #184d47;
+}
+.nature {
+  width: 300px;
+}
+.cloud-sun-rain {
+  width: 70px;
+  color: black;
+  display: block;
+  margin: 0 auto;
+}
