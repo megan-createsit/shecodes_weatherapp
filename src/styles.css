@@ -16,7 +16,9 @@
   color: #184d47;
 }
 .tempChange {
-  color: #184d47;
+  color: #184d47; 
+  font-size: 20px;
+  font-weight: bold;
 }
 .nature {
   width: 300px;
