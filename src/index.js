@@ -35,7 +35,7 @@ function currentTemp(response) {
   let description = response.data.weather[0].description;
   let tempReplace = document.querySelector(`b`);
   let describeReplace = document.querySelector(`.description`);
-  describeReplace.innerHTML = `It is ${description} today.`;
+  describeReplace.innerHTML = `There will be ${description} today.`;
   tempReplace.innerHTML = `${temperature}°F`;
 }
 
