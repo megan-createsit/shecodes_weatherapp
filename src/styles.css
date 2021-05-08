@@ -2,7 +2,7 @@ body {
   background: #cfdac8;
 }
 .weatherapp {
-  margin: 100px;
+  margin: 7% 18%;
   border-width: 200px;
   border-color: black;
   background-color: rgba(255, 255, 255, 0.233);
@@ -24,7 +24,7 @@ body {
   font-weight: bold;
 }
 .nature {
-  width: 300px;
+  width: 90%;
 }
 .cloud-sun-rain {
   width: 70px;
