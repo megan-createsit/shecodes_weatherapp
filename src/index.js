@@ -15,13 +15,13 @@ let days = [
   "Saturday"
 ];
 let day = days[now.getDay()];
-dateTime.innerHTML = `${day} ${currentTime}`;
+dateTime.innerHTML = `${day}, ${currentTime}`;
 
 function searchSubmit(event) {
   event.preventDefault();
   let city = document.querySelector("#text");
-  let newCity = document.querySelector("#city-name");
-  newCity.innerHTML = `Your last search was for ${city.value}.`;
+  let currentCity = document.querySelector("h1");
+  currentCity.innerHTML = `${city.value}`
 }
 let search = document.querySelector("#city-search");
 search.addEventListener("submit", searchSubmit);
