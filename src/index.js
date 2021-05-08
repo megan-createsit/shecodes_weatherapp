@@ -26,18 +26,18 @@ function searchSubmit(event) {
 let search = document.querySelector("#city-search");
 search.addEventListener("submit", searchSubmit);
 
-let temp = document.querySelector("h3");
+let temp = document.querySelector("b");
 
 function changeTemp(event) {
   event.preventDefault();
-  temp.innerHTML = `62.6°`;
+  temp.innerHTML = `62.6`;
 }
 let celsius = document.querySelector("#celsius");
 celsius.addEventListener("click", changeTemp);
 
 function changeTempBack(event) {
   event.preventDefault();
-  temp.innerHTML = `17°`;
+  temp.innerHTML = `17`;
 }
 let fahrenheit = document.querySelector("#fahrenheit");
 fahrenheit.addEventListener("click", changeTempBack);
