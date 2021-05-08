@@ -5,7 +5,7 @@ body {
   margin: 100px;
   border-width: 200px;
   border-color: black;
-  background-color: #cfdac825;
+  background-color: rgba(255, 255, 255, 0.233);
   padding: 50px;
   border-radius: 10%;
 }
