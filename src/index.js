@@ -22,22 +22,20 @@ function searchSubmit(event) {
   let city = document.querySelector("#text");
   let currentCity = document.querySelector("h1");
   currentCity.innerHTML = `${city.value}`
+  let apiKey = `128f6df614a32ed62271bc180835bf6d`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city.value}&units=imperial`;
+  axios.get(`${apiUrl}&appid=${apiKey}`).then(currentTemp);
 }
 let search = document.querySelector("#city-search");
 search.addEventListener("submit", searchSubmit);
 
-let temp = document.querySelector("b");
-
-function changeTemp(event) {
-  event.preventDefault();
-  temp.innerHTML = `62.6`;
+function currentTemp(response) {
+  console.log(response.data);
+  let temperature = Math.round(response.data.main.temp);
+  let description = response.data.weather[0].description;
+  let tempReplace = document.querySelector(`b`);
+  let describeReplace = document.querySelector(`.description`);
+  describeReplace.innerHTML = `It is ${description} today.`;
+  tempReplace.innerHTML = `${temperature}°F`;
 }
-let celsius = document.querySelector("#celsius");
-celsius.addEventListener("click", changeTemp);
 
-function changeTempBack(event) {
-  event.preventDefault();
-  temp.innerHTML = `17`;
-}
-let fahrenheit = document.querySelector("#fahrenheit");
-fahrenheit.addEventListener("click", changeTempBack);
