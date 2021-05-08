@@ -1,3 +1,6 @@
+body {
+  background: #cfdac8;
+}
 .weatherapp {
   margin: 100px;
   border-width: 200px;
