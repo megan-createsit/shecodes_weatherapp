@@ -1,13 +1,28 @@
 body {
-  background: #cfdac8;
+  background-image: url(https://image.freepik.com/free-photo/wooden-wood-backgrounds-textured-pattern-wallpaper-concept_53876-14103.jpg);
 }
 .weatherapp {
-  margin: 7% 18%;
+  margin: 7% 18% 2% 18%;
   border-width: 200px;
   border-color: black;
-  background-color: rgba(255, 255, 255, 0.233);
+  background-color:#f2eeebc7;
   padding: 50px;
-  border-radius: 3%;
+  border-radius: 10%;
+  font-family: 'oxygen', sans-serif;
+}
+.todo {
+  text-align: center;
+}
+.card {
+  border-radius: 10%;
+  background-color:#f2eeeb60;
+}
+.card-title {
+  text-align: center; 
+  line-height: 40px;
+}
+.card-body {
+  text-align: center;
 }
 #date-time {
   text-align: left;
@@ -19,15 +34,27 @@ body {
 .tempChange {
   font-size: 20px;
 }
+.todo1 {width: 300px;margin-left: auto;margin-right: auto;height: 100px;background-color:#666;opacity: 0.5;}
 .nature {
-  width: 90%;
+  width: 70%;
 }
 .cloud-sun-rain {
-  width: 70px;
+  width: 50%;
   color: black;
   display: block;
   margin: 0 auto;
 }
-.gethubrepo {
+footer {
   text-align: center;
+  font-family: 'oxygen', sans-serif;
+  font-weight: bolder;
+  text-align: center;
+  border-radius: 10%;
 }
+a {
+  color: #6B442D;
+}
+.footer {
+  color: black; 
+}
+
