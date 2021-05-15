@@ -29,6 +29,7 @@ body {
   font-size: 20px;
 }
 .city {
+  text-align: center;
   color: #184d47;
 }
 .tempChange {
@@ -36,7 +37,8 @@ body {
 }
 .todo1 {width: 300px;margin-left: auto;margin-right: auto;height: 100px;background-color:#666;opacity: 0.5;}
 .nature {
-  width: 70%;
+  text-align: center;
+  width: 30%;
 }
 .cloud-sun-rain {
   width: 50%;
