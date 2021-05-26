@@ -3,6 +3,7 @@ let now = new Date();
 let dateTime = document.querySelector("#date-time");
 
 let hours = now.getHours();
+
 let minutes = now.getMinutes();
 let currentTime = `${hours}:${minutes}`;
 let days = [
@@ -33,9 +34,15 @@ function currentTemp(response) {
   console.log(response.data);
   let temperature = Math.round(response.data.main.temp);
   let description = response.data.weather[0].description;
-  let tempReplace = document.querySelector(`b`);
-  let describeReplace = document.querySelector(`.description`);
-  describeReplace.innerHTML = `There will be ${description} today.`;
+  let precip = Math.round(response.data.main.humidity);
+  let wind = Math.round(response.data.weather.wind.speed);
+  let tempReplace = document.querySelector("b");
+  let describeReplace = document.querySelector(".description");
+  let precipReplace = document.querySelector("#precip");
+  let windReplace = document.querySelector("#wind");
+  describeReplace.innerHTML = `${description}`;
   tempReplace.innerHTML = `${temperature}°F`;
+  precipReplace.innerHTML = `Humidity: ${precip}%`;
+  windReplace.innerHTML = `Wind: ${wind} m/h`;
 }
 

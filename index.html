@@ -15,11 +15,7 @@
     <div>
 		<link rel="stylesheet" href="src/styles.css"/>
         <div class="weatherapp">
-            <a class="city" href="">Boise</a>
-            <a class="city" href="">Durango</a>
-            <a class="city" href="">Seattle</a>
-            <a class="city" href="">Denver</a>
-            <br />
+            
             <br />
           <form id="city-search">
             <input id="text" type="text" autofill="off"/>
@@ -33,12 +29,15 @@
               <div class="col-6">
                 <h1></h1>
             <h2><p id="date-time"> Tuesday 16:00 </p></h2>
+            <p class="description"></p>
             <img src="src/cloud-sun-rain-solid.svg" class="nature" alt="Image icon">
             
           </div>
               <div class="col-6">
                 <span class="tempChange"><b> </b></span>
-                <p class="description"></p>
+                <a href="#" id="fahrenheit">°F</a>/<a href="#" id="celsius">°C</a>
+                <p id="wind"></p>
+                <p id="precip"></p>
               </div>
           </div>
           <div class="bootstrap">
@@ -46,77 +45,6 @@
           <br/>
           <hr class="todo1"/>
           <p class="todo">Looking for things to do? <a href="https://www.afoodiestaysfit.com/20-fun-indoor-activities-for-adults-at-home/" target="_blank">Indoors</a> | <a href="https://www.liveson.org/15-fun-outdoor-activities-for-adults/" target="_blank">Outdoors</a></p>
-          <hr />
-        <div class="bootstrap">
-            <div class="row row-cols-1 row-cols-md-6 g-1">
-              <div class="col-2">
-                <div class="card">
-                  <div class="card-title">
-                      <h5 class="card-title">Mon</h5>
-                  </div>
-                  <img src="src/cloud-sun-rain-solid.svg" class="cloud-sun-rain" alt="Weather icon">
-                  <div class="card-body">
-                    <p class="card-text">H/L <br/> % <br/> MPH</p>
-                  </div>
-                </div>
-              </div>
-                <div class="col-2">
-                  <div class="card">
-                    <div class="card-title">
-                        <h5 class="card-title">Tues</h5>
-                    </div>
-                    <img src="src/cloud-sun-rain-solid.svg" class="cloud-sun-rain" alt="Weather icon">
-                    <div class="card-body">
-                      <p class="card-text">H/L <br/> % <br/> MPH</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-2">
-                  <div class="card">
-                    <div class="card-title">
-                        <h5 class="card-title">Wed</h5>
-                    </div>
-                    <img src="src/cloud-sun-rain-solid.svg" class="cloud-sun-rain" alt="Weather icon">
-                    <div class="card-body">
-                      <p class="card-text">H/L <br/> % <br/> MPH</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-2">
-                  <div class="card">
-                    <div class="card-title">
-                        <h5 class="card-title">Thurs</h5>
-                    </div>
-                    <img src="src/cloud-sun-rain-solid.svg" class="cloud-sun-rain" alt="Weather icon">
-                    <div class="card-body">
-                      <p class="card-text">H/L <br/> % <br/> MPH</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-2">
-                  <div class="card">
-                    <div class="card-title">
-                        <h5 class="card-title">Fri</h5>
-                    </div>
-                    <img src="src/cloud-sun-rain-solid.svg" class="cloud-sun-rain" alt="Weather icon">
-                    <div class="card-body">
-                      <p class="card-text">H/L <br/> % <br/> MPH</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-2">
-                  <div class="card">
-                    <div class="card-title">
-                        <h5 class="card-title">Sat</h5>
-                    </div>
-                    <img src="src/cloud-sun-rain-solid.svg" class="cloud-sun-rain" alt="Weather icon">
-                    <div class="card-body">
-                      <p class="card-text">H/L <br/> % <br/> MPH</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-        </div>
         </div>
       </div>
       <footer>

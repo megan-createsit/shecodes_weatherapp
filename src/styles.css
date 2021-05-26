@@ -59,4 +59,7 @@ a {
 .footer {
   color: black; 
 }
-
+b {
+  font-size: 70px;
+  font-family: 'oxygen', sans-serif;
+}
