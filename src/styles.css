@@ -1,6 +1,24 @@
 body {
   background-image: url(https://image.freepik.com/free-photo/wooden-wood-backgrounds-textured-pattern-wallpaper-concept_53876-14103.jpg);
 }
+h1 {
+  text-align: center;
+}
+button {
+  display: block;
+  margin: 0 auto;
+  background: rgba(165, 42, 42, 0);
+  border-radius: 5%;
+  border-color:rgba(165, 42, 42, 0);
+  border-width: 0px;
+}
+.citysearch {
+  display: block; 
+  margin: 0 auto;
+}
+.description {
+text-align: center;
+}
 .weatherapp {
   margin: 7% 18% 2% 18%;
   border-width: 200px;
@@ -24,10 +42,6 @@ body {
 .card-body {
   text-align: center;
 }
-#date-time {
-  text-align: left;
-  font-size: 20px;
-}
 .city {
   text-align: center;
   color: #184d47;
@@ -37,8 +51,10 @@ body {
 }
 .todo1 {width: 300px;margin-left: auto;margin-right: auto;height: 100px;background-color:#666;opacity: 0.5;}
 .nature {
-  text-align: center;
-  width: 30%;
+  display: block;
+  float: right;
+  margin: 5% auto;
+  width: 50%;
 }
 .cloud-sun-rain {
   width: 50%;
@@ -62,4 +78,10 @@ a {
 b {
   font-size: 70px;
   font-family: 'oxygen', sans-serif;
+}
+.datetime {
+  display: block;
+  font-family: 'oxygen', sans-serif;
+  font-size: 15px;
+  color: black;
 }

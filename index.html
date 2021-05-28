@@ -15,34 +15,32 @@
     <div>
 		<link rel="stylesheet" href="src/styles.css"/>
         <div class="weatherapp">
-            
             <br />
-          <form id="city-search">
+          <form class="citysearch" id="city-search">
             <input id="text" type="text" autofill="off"/>
             <input type="submit" value="Search"/>
-            <input type="submit" value="Current"/>
+            <input type="submit" value="Current"/> <h2><p class="datetime" id="date-time"></p></h2>
           </form>
           <p id="city-name"></p>
           <hr />
           <div class="currentweather">
+            <h1></h1>
+            <p class="description"></p>
             <div class="row align-items-start">
               <div class="col-6">
-                <h1></h1>
-            <h2><p id="date-time"> Tuesday 16:00 </p></h2>
-            <p class="description"></p>
-            <img src="src/cloud-sun-rain-solid.svg" class="nature" alt="Image icon">
+            
+            <img src="http://openweathermap.org/img/wn/${reponse.data.weather[0].icon}@2x.png" id=icon class="nature" alt="...">
             
           </div>
               <div class="col-6">
-                <span class="tempChange"><b> </b></span>
-                <a href="#" id="fahrenheit">°F</a>/<a href="#" id="celsius">°C</a>
+                <span class="tempChange"><b></b></span>
                 <p id="wind"></p>
                 <p id="precip"></p>
               </div>
           </div>
           <div class="bootstrap">
           </div>
-          <br/>
+          <button> Pick your unit: <a href="#" id="fahrenheit" class="active">°F</a>|<a href="#" id="celsius" class="active">°C</a></button>
           <hr class="todo1"/>
           <p class="todo">Looking for things to do? <a href="https://www.afoodiestaysfit.com/20-fun-indoor-activities-for-adults-at-home/" target="_blank">Indoors</a> | <a href="https://www.liveson.org/15-fun-outdoor-activities-for-adults/" target="_blank">Outdoors</a></p>
         </div>
