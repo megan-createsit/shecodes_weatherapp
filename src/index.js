@@ -29,7 +29,51 @@ function searchSubmit(event) {
 let search = document.querySelector("#city-search");
 search.addEventListener("submit", searchSubmit);
 //end search city info//
-//start weather data info//
+//start forecast info//
+function displayForecast(response) {
+  let forecast = response.data.daily;
+
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 6) {
+      forecastHTML =
+        forecastHTML +
+        `
+      <div class="col-2">
+        <div class="weather-forecast-date">${formatDay(forecastDay.dt)}</div>
+        <img
+          src="http://openweathermap.org/img/wn/${
+            forecastDay.weather[0].icon
+          }@2x.png"
+          alt=""
+          width="60"
+        />
+        <div class="weather-forecast-temperatures">
+          <span class="weather-forecast-temperature-max"> ${Math.round(
+            forecastDay.temp.max
+          )}°C </span>
+          <span class="weather-forecast-temperature-min"> ${Math.round(
+            forecastDay.temp.min
+          )}°C </span>
+        </div>
+      </div>
+  `;
+    }
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+function getForecast(coordinates) {
+  let apiKey = `128f6df614a32ed62271bc180835bf6d`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=imperial`;
+  axios.get(apiUrl).then(displayForecast);
+}
+//end forecast info//
+//start today weather data info//
 function currentTemp(response) {
   console.log(response.data);
   let imperialTemperature = Math.round(response.data.main.temp);
@@ -55,6 +99,8 @@ function currentTemp(response) {
     let temperatureElement = document.querySelector("b");
     let imperialRead = Math.round(imperialTemperature);
     temperatureElement.innerHTML = `${imperialRead}°F`;
+
+    getForecast(response.data.coord);
   }
   
   function metricChange(event) {
@@ -73,9 +119,5 @@ fahrenheitLink.addEventListener("click", imperialChange);
 let celsiusLink = document.querySelector("#celsius");
 celsiusLink.addEventListener("click", metricChange);
 }
-//end weather data info//
-//start imperial and metric change//
-
 let imperialTemperature = null;
-
-//end imperial and metric change//
+//end today weather data info//
