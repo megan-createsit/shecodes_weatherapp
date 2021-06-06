@@ -6,16 +6,23 @@ h1 {
   font-size: 30px;
   font-weight: bold;
 }
-button {
-  display: block;
-  margin: 0 auto;
-  background: rgba(165, 42, 42, 0);
-  border-radius: 5%;
-  border-color:rgba(165, 42, 42, 0);
-  border-width: 0px;
+a {
+  display: inline;
+  font-weight:normal;
+  font-size: 20px;
 }
-.weatherforecast {
-  border-color: black ;
+.citybox {
+  border-radius: 20px 0 0 20px;
+  border-color: transparent;
+  background-color: white;
+}
+.submitbutton {
+  background-image: url(https://image.freepik.com/free-photo/wooden-wood-backgrounds-textured-pattern-wallpaper-concept_53876-14103.jpg);
+  color: white;
+  font-weight: bold;
+  border-radius: 0 20px 20px 0;
+  box-shadow: transparent;
+  border-image: url(https://image.freepik.com/free-photo/wooden-wood-backgrounds-textured-pattern-wallpaper-concept_53876-14103.jpg);
 }
 .citysearch {
   display: block; 
@@ -30,7 +37,7 @@ text-align: center;
   border-color: black;
   background-color:#f2eeebc7;
   padding: 50px;
-  border-radius: 10%;
+  border-radius: 40px;
   font-family: 'oxygen', sans-serif;
 }
 .todo {
@@ -53,11 +60,32 @@ text-align: center;
 .nature {
   display: block;
   float: right;
-  margin: 5% auto;
-  width: 25%;
+  margin: 1% auto;
+  width: 50%;
 }
 .col-2 {
   text-align: center;
+}
+
+
+.footer {
+  color: black; 
+}
+b {
+  font-size: 70px;
+  font-family: 'oxygen', sans-serif;
+}
+.datetime {
+  display: inline-block;
+  margin: 0 0 0 300px;
+  text-align:right;
+  font-family: 'oxygen', sans-serif;
+  font-weight: normal;
+  font-size: 20px;
+  color: black;
+}
+.weatherforecast {
+  border-color: black ;
 }
 .weather-forecast-date {
   text-align: center;
@@ -73,19 +101,6 @@ footer {
   text-align: center;
   border-radius: 10%;
 }
-a {
-  color: #6B442D;
-}
-.footer {
-  color: black; 
-}
-b {
-  font-size: 70px;
-  font-family: 'oxygen', sans-serif;
-}
-.datetime {
-  display: block;
-  font-family: 'oxygen', sans-serif;
-  font-size: 15px;
-  color: black;
+.wind {
+  line-height: 3px;
 }

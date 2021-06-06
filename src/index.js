@@ -1,20 +1,26 @@
 //start date info//
-let now = new Date();
-let dateTime = document.querySelector("#date-time");
-let hours = now.getHours();
-let minutes = now.getMinutes();
-let currentTime = `${hours}:${minutes}`;
-let days = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-];
-let day = days[now.getDay()];
-dateTime.innerHTML = `${day}, ${currentTime}`;
+function formatDate() {
+  let now = new Date();
+  let dateTime = document.querySelector("#date-time");
+  let hours = now.getHours();
+  let minutes = now.getMinutes();
+  if (minutes <10) {
+    minutes = `0${minutes}`;
+  }
+  let currentTime = `${hours}:${minutes}`;
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let day = days[now.getDay()];
+  dateTime.innerHTML = `${day}, ${currentTime}`;
+}
+formatDate();
 //end date info//
 //start search city function//
 function searchSubmit(event) {
@@ -48,7 +54,7 @@ function displayForecast(response) {
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = `<div class="row">`;
   forecast.forEach(function (forecastDay, index) {
-    if (index < 6) {
+    if (index > 0 && index < 7) {
       forecastHTML =
         forecastHTML +
         `
@@ -64,10 +70,10 @@ function displayForecast(response) {
         <div class="weather-forecast-temperatures">
           <span class="weather-forecast-temperature-max"> ${Math.round(
             forecastDay.temp.max
-          )}°F</span>
+          )}<sup>°F</sup></span>
           <span class="weather-forecast-temperature-min"> | ${Math.round(
             forecastDay.temp.min
-          )}°F</span>
+          )}<sup>°F</sup></span>
         </div>
       </div>
   `;
@@ -86,7 +92,7 @@ function getForecast(coordinates) {
 function currentTemp(response) {
   console.log(response.data);
   let imperialTemperature = Math.round(response.data.main.temp);
-  let description = response.data.weather[0].description;
+  let description = (response.data.weather[0].description);
   let precip = Math.round(response.data.main.humidity);
   let wind = Math.round(response.data.wind.speed);
   let icon = response.data.weather[0].icon;
@@ -96,7 +102,7 @@ function currentTemp(response) {
   let windReplace = document.querySelector("#wind");
   let iconReplace = document.querySelector("#icon");
   describeReplace.innerHTML = `${description}`;
-  tempReplace.innerHTML = `${imperialTemperature}°F`;
+  tempReplace.innerHTML = `${imperialTemperature}<sup>°F</sup>`;
   precipReplace.innerHTML = `Humidity: ${precip}%`;
   windReplace.innerHTML = `Wind: ${wind} m/h`;
   iconReplace.setAttribute(
@@ -112,7 +118,7 @@ function imperialChange(event) {
   fahrenheitLink.classList.add("active");
   let temperatureElement = document.querySelector("b");
   let imperialRead = Math.round(imperialTemperature);
-  temperatureElement.innerHTML = `${imperialRead}°F`;
+  temperatureElement.innerHTML = `${imperialRead}<sup>°F</sup>`;
 }
 function metricChange(event) {
   event.preventDefault();
@@ -121,11 +127,13 @@ function metricChange(event) {
   let metricTemperature = ((imperialTemperature - 32) * 5) / 9;
   let temperatureElement = document.querySelector("b");
   let metricRead = Math.round(metricTemperature);
-  temperatureElement.innerHTML = `${metricRead}°C`;
+  temperatureElement.innerHTML = `${metricRead}<sup>°C</sup>`;
 }
+let imperialTemperature = null;
+
 let fahrenheitLink = document.querySelector("#fahrenheit");
 fahrenheitLink.addEventListener("click", imperialChange);
 let celsiusLink = document.querySelector("#celsius");
 celsiusLink.addEventListener("click", metricChange);
-let imperialTemperature = null;
+
 //end today weather data info//

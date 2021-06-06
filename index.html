@@ -13,16 +13,20 @@
     <div>
 		<link rel="stylesheet" href="src/styles.css"/>
         <div class="weatherapp">
+          <div class="searchdiv">
           <form class="citysearch" id="city-search">
-            <input id="text" type="text" autofill="off"/>
-            <input type="submit" value="Search"/>
-            <input type="submit" value="Current"/> <h2><p class="datetime" id="date-time"></p></h2>
+            <input id="text" type="text" autofill="off" class="citybox"/>
+            <input type="submit" class="submitbutton" value="Search"/>
+            <h2 class="datetime" id="date-time"></h2>
           </form>
+          </div>
           <p id="city-name"></p>
           <hr />
           <div class="currentweather">
             <h1></h1>
             <p class="description"></p>
+            <p class="button"></p>
+            <hr class="todo1"/>
             <div class="row align-items-start">
               <div class="col-6">
             
@@ -31,15 +35,12 @@
           </div>
               <div class="col-6">
                 <span class="tempChange"><b></b></span>
-                <p id="wind"></p>
-                <p id="precip"></p>
+                <p class="wind" id="wind"></p>
+                <p class="precip" id="precip"></p>
               </div>
           </div>
           <div class="bootstrap">
           </div>
-          <button> Pick your unit: <a href="#" id="fahrenheit" class="active">°F</a>|<a href="#" id="celsius" class="active">°C</a></button>
-          <hr class="todo1"/>
-          <p class="todo">Looking for things to do? <a href="https://www.afoodiestaysfit.com/20-fun-indoor-activities-for-adults-at-home/" target="_blank">Indoors</a> | <a href="https://www.liveson.org/15-fun-outdoor-activities-for-adults/" target="_blank">Outdoors</a></p>
         </div>
         <hr />
         <div class="weatherforecast" id="forecast"></div>
