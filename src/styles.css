@@ -10,10 +10,11 @@ a {
   display: inline;
   font-weight:normal;
   font-size: 20px;
+  font-color: brown;
 }
 .button {
-  display: block; 
-  margin: 0 auto;
+  text-align: center; 
+  line-height: 4px auto auto auto;
 }
 .citybox {
   border-radius: 20px 0 0 20px;
@@ -81,7 +82,7 @@ b {
 }
 .datetime {
   display: inline-block;
-  margin: 0 0 0 300px;
+  margin: 0 0 0 150px;
   text-align:right;
   font-family: 'oxygen', sans-serif;
   font-weight: normal;

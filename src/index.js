@@ -18,7 +18,7 @@ function formatDate() {
     "Saturday",
   ];
   let day = days[now.getDay()];
-  dateTime.innerHTML = `${day}, ${currentTime}`;
+  dateTime.innerHTML = `${day}, ${currentTime} | `;
 }
 formatDate();
 //end date info//
@@ -91,7 +91,7 @@ function getForecast(coordinates) {
 //start today weather data info//
 function currentTemp(response) {
   console.log(response.data);
-  let imperialTemperature = Math.round(response.data.main.temp);
+  imperialTemperature = Math.round(response.data.main.temp);
   let description = (response.data.weather[0].description);
   let precip = Math.round(response.data.main.humidity);
   let wind = Math.round(response.data.wind.speed);
